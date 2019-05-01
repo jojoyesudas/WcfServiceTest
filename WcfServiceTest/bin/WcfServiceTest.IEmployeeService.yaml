@@ -1,0 +1,552 @@
+﻿swagger: '2.0'
+info:
+  title: IEmployeeService
+  version: "1.0.0.0"
+host: localhost
+schemes:
+  - http
+  - https
+basePath: /IEmployeeService
+paths:
+  /AddAsync:
+  /UpdateAsync:
+  /DeleteAsync:
+  /GetAsync:
+  /GetAllAsync:
+definitions:
+  Task:
+    type: object
+    properties:
+      DebuggerDisplayMethodDescription:
+        type: "string"
+      Options:
+        $ref: "#/definitions/TaskCreationOptions"
+      IsWaitNotificationEnabledOrNotRanToCompletion:
+        type:" boolean"
+      ShouldNotifyDebuggerOfWaitCompletion:
+        type:" boolean"
+      IsWaitNotificationEnabled:
+        type:" boolean"
+      Id:
+        type: "number"
+        format: int32
+      CurrentId:
+        type: "number"
+        format: decimal(9,2)
+      InternalCurrent:
+        $ref: "#/definitions/Task"
+      CurrentStackGuard:
+        $ref: "#/definitions/StackGuard"
+      Exception:
+        $ref: "#/definitions/AggregateException"
+      Status:
+        $ref: "#/definitions/TaskStatus"
+      IsCanceled:
+        type:" boolean"
+      IsCancellationRequested:
+        type:" boolean"
+      CancellationToken:
+        $ref: "#/definitions/CancellationToken"
+      IsCancellationAcknowledged:
+        type:" boolean"
+      IsCompleted:
+        type:" boolean"
+      IsRanToCompletion:
+        type:" boolean"
+      CreationOptions:
+        $ref: "#/definitions/TaskCreationOptions"
+      System.IAsyncResult.AsyncWaitHandle:
+        $ref: "#/definitions/WaitHandle"
+      AsyncState:
+        $ref: "#/definitions/Object"
+      System.IAsyncResult.CompletedSynchronously:
+        type:" boolean"
+      ExecutingTaskScheduler:
+        $ref: "#/definitions/TaskScheduler"
+      Factory:
+        $ref: "#/definitions/TaskFactory"
+      CompletedTask:
+        $ref: "#/definitions/Task"
+      CompletedEvent:
+        $ref: "#/definitions/ManualResetEventSlim"
+      IsSelfReplicatingRoot:
+        type:" boolean"
+      IsChildReplica:
+        type:" boolean"
+      ActiveChildCount:
+        type: "number"
+        format: int32
+      ExceptionRecorded:
+        type:" boolean"
+      IsFaulted:
+        type:" boolean"
+      CapturedContext:
+        $ref: "#/definitions/ExecutionContext"
+      IsExceptionObservedByParent:
+        type:" boolean"
+      IsDelegateInvoked:
+        type:" boolean"
+      SavedStateForNextReplica:
+        $ref: "#/definitions/Object"
+      SavedStateFromPreviousReplica:
+        $ref: "#/definitions/Object"
+      HandedOverChildReplica:
+        $ref: "#/definitions/Task"
+  Task`1:
+    type: object
+    properties:
+      DebuggerDisplayResultDescription:
+        type: "string"
+      DebuggerDisplayMethodDescription:
+        type: "string"
+      Result:
+        $ref: "#/definitions/TResult"
+      ResultOnSuccess:
+        $ref: "#/definitions/TResult"
+      Factory:
+        $ref: "#/definitions/TaskFactory`1"
+  Task`1:
+    type: object
+    properties:
+      DebuggerDisplayResultDescription:
+        type: "string"
+      DebuggerDisplayMethodDescription:
+        type: "string"
+      Result:
+        $ref: "#/definitions/TResult"
+      ResultOnSuccess:
+        $ref: "#/definitions/TResult"
+      Factory:
+        $ref: "#/definitions/TaskFactory`1"
+  Task`1:
+    type: object
+    properties:
+      DebuggerDisplayResultDescription:
+        type: "string"
+      DebuggerDisplayMethodDescription:
+        type: "string"
+      Result:
+        $ref: "#/definitions/TResult"
+      ResultOnSuccess:
+        $ref: "#/definitions/TResult"
+      Factory:
+        $ref: "#/definitions/TaskFactory`1"
+  Task`1:
+    type: object
+    properties:
+      DebuggerDisplayResultDescription:
+        type: "string"
+      DebuggerDisplayMethodDescription:
+        type: "string"
+      Result:
+        $ref: "#/definitions/TResult"
+      ResultOnSuccess:
+        $ref: "#/definitions/TResult"
+      Factory:
+        $ref: "#/definitions/TaskFactory`1"
+  EmployeeContract:
+    type: object
+    properties:
+      ID:
+        type: "number"
+        format: int32
+      FName:
+        type: "string"
+      LName:
+        type: "string"
+      Gender:
+        type: "string"
+      Address:
+        $ref: "#/definitions/AddressContract"
+  TaskCreationOptions:
+    type: object
+  Task:
+    type: object
+    properties:
+      DebuggerDisplayMethodDescription:
+        type: "string"
+      Options:
+        $ref: "#/definitions/TaskCreationOptions"
+      IsWaitNotificationEnabledOrNotRanToCompletion:
+        type:" boolean"
+      ShouldNotifyDebuggerOfWaitCompletion:
+        type:" boolean"
+      IsWaitNotificationEnabled:
+        type:" boolean"
+      Id:
+        type: "number"
+        format: int32
+      CurrentId:
+        type: "number"
+        format: decimal(9,2)
+      InternalCurrent:
+        $ref: "#/definitions/Task"
+      CurrentStackGuard:
+        $ref: "#/definitions/StackGuard"
+      Exception:
+        $ref: "#/definitions/AggregateException"
+      Status:
+        $ref: "#/definitions/TaskStatus"
+      IsCanceled:
+        type:" boolean"
+      IsCancellationRequested:
+        type:" boolean"
+      CancellationToken:
+        $ref: "#/definitions/CancellationToken"
+      IsCancellationAcknowledged:
+        type:" boolean"
+      IsCompleted:
+        type:" boolean"
+      IsRanToCompletion:
+        type:" boolean"
+      CreationOptions:
+        $ref: "#/definitions/TaskCreationOptions"
+      System.IAsyncResult.AsyncWaitHandle:
+        $ref: "#/definitions/WaitHandle"
+      AsyncState:
+        $ref: "#/definitions/Object"
+      System.IAsyncResult.CompletedSynchronously:
+        type:" boolean"
+      ExecutingTaskScheduler:
+        $ref: "#/definitions/TaskScheduler"
+      Factory:
+        $ref: "#/definitions/TaskFactory"
+      CompletedTask:
+        $ref: "#/definitions/Task"
+      CompletedEvent:
+        $ref: "#/definitions/ManualResetEventSlim"
+      IsSelfReplicatingRoot:
+        type:" boolean"
+      IsChildReplica:
+        type:" boolean"
+      ActiveChildCount:
+        type: "number"
+        format: int32
+      ExceptionRecorded:
+        type:" boolean"
+      IsFaulted:
+        type:" boolean"
+      CapturedContext:
+        $ref: "#/definitions/ExecutionContext"
+      IsExceptionObservedByParent:
+        type:" boolean"
+      IsDelegateInvoked:
+        type:" boolean"
+      SavedStateForNextReplica:
+        $ref: "#/definitions/Object"
+      SavedStateFromPreviousReplica:
+        $ref: "#/definitions/Object"
+      HandedOverChildReplica:
+        $ref: "#/definitions/Task"
+  StackGuard:
+    type: object
+  AggregateException:
+    type: object
+    properties:
+      InnerExceptions:
+        $ref: "#/definitions/ReadOnlyCollection`1"
+      InnerExceptionCount:
+        type: "number"
+        format: int32
+  TaskStatus:
+    type: object
+  CancellationToken:
+    type: object
+    properties:
+      None:
+        $ref: "#/definitions/CancellationToken"
+      IsCancellationRequested:
+        type:" boolean"
+      CanBeCanceled:
+        type:" boolean"
+      WaitHandle:
+        $ref: "#/definitions/WaitHandle"
+  TaskCreationOptions:
+    type: object
+  WaitHandle:
+    type: object
+    properties:
+      Handle:
+        $ref: "#/definitions/IntPtr"
+      SafeWaitHandle:
+        $ref: "#/definitions/SafeWaitHandle"
+  Object:
+    type: object
+  TaskScheduler:
+    type: object
+    properties:
+      MaximumConcurrencyLevel:
+        type: "number"
+        format: int32
+      RequiresAtomicStartTransition:
+        type:" boolean"
+      Default:
+        $ref: "#/definitions/TaskScheduler"
+      Current:
+        $ref: "#/definitions/TaskScheduler"
+      InternalCurrent:
+        $ref: "#/definitions/TaskScheduler"
+      Id:
+        type: "number"
+        format: int32
+  TaskFactory:
+    type: object
+    properties:
+      DefaultScheduler:
+        $ref: "#/definitions/TaskScheduler"
+      CancellationToken:
+        $ref: "#/definitions/CancellationToken"
+      Scheduler:
+        $ref: "#/definitions/TaskScheduler"
+      CreationOptions:
+        $ref: "#/definitions/TaskCreationOptions"
+      ContinuationOptions:
+        $ref: "#/definitions/TaskContinuationOptions"
+  Task:
+    type: object
+    properties:
+      DebuggerDisplayMethodDescription:
+        type: "string"
+      Options:
+        $ref: "#/definitions/TaskCreationOptions"
+      IsWaitNotificationEnabledOrNotRanToCompletion:
+        type:" boolean"
+      ShouldNotifyDebuggerOfWaitCompletion:
+        type:" boolean"
+      IsWaitNotificationEnabled:
+        type:" boolean"
+      Id:
+        type: "number"
+        format: int32
+      CurrentId:
+        type: "number"
+        format: decimal(9,2)
+      InternalCurrent:
+        $ref: "#/definitions/Task"
+      CurrentStackGuard:
+        $ref: "#/definitions/StackGuard"
+      Exception:
+        $ref: "#/definitions/AggregateException"
+      Status:
+        $ref: "#/definitions/TaskStatus"
+      IsCanceled:
+        type:" boolean"
+      IsCancellationRequested:
+        type:" boolean"
+      CancellationToken:
+        $ref: "#/definitions/CancellationToken"
+      IsCancellationAcknowledged:
+        type:" boolean"
+      IsCompleted:
+        type:" boolean"
+      IsRanToCompletion:
+        type:" boolean"
+      CreationOptions:
+        $ref: "#/definitions/TaskCreationOptions"
+      System.IAsyncResult.AsyncWaitHandle:
+        $ref: "#/definitions/WaitHandle"
+      AsyncState:
+        $ref: "#/definitions/Object"
+      System.IAsyncResult.CompletedSynchronously:
+        type:" boolean"
+      ExecutingTaskScheduler:
+        $ref: "#/definitions/TaskScheduler"
+      Factory:
+        $ref: "#/definitions/TaskFactory"
+      CompletedTask:
+        $ref: "#/definitions/Task"
+      CompletedEvent:
+        $ref: "#/definitions/ManualResetEventSlim"
+      IsSelfReplicatingRoot:
+        type:" boolean"
+      IsChildReplica:
+        type:" boolean"
+      ActiveChildCount:
+        type: "number"
+        format: int32
+      ExceptionRecorded:
+        type:" boolean"
+      IsFaulted:
+        type:" boolean"
+      CapturedContext:
+        $ref: "#/definitions/ExecutionContext"
+      IsExceptionObservedByParent:
+        type:" boolean"
+      IsDelegateInvoked:
+        type:" boolean"
+      SavedStateForNextReplica:
+        $ref: "#/definitions/Object"
+      SavedStateFromPreviousReplica:
+        $ref: "#/definitions/Object"
+      HandedOverChildReplica:
+        $ref: "#/definitions/Task"
+  ManualResetEventSlim:
+    type: object
+    properties:
+      WaitHandle:
+        $ref: "#/definitions/WaitHandle"
+      IsSet:
+        type:" boolean"
+      SpinCount:
+        type: "number"
+        format: int32
+      Waiters:
+        type: "number"
+        format: int32
+  ExecutionContext:
+    type: object
+    properties:
+      isNewCapture:
+        type:" boolean"
+      isFlowSuppressed:
+        type:" boolean"
+      PreAllocatedDefault:
+        $ref: "#/definitions/ExecutionContext"
+      IsPreAllocatedDefault:
+        type:" boolean"
+      LogicalCallContext:
+        $ref: "#/definitions/LogicalCallContext"
+      IllogicalCallContext:
+        $ref: "#/definitions/IllogicalCallContext"
+      SynchronizationContext:
+        $ref: "#/definitions/SynchronizationContext"
+      SynchronizationContextNoFlow:
+        $ref: "#/definitions/SynchronizationContext"
+      HostExecutionContext:
+        $ref: "#/definitions/HostExecutionContext"
+      SecurityContext:
+        $ref: "#/definitions/SecurityContext"
+  Object:
+    type: object
+  Object:
+    type: object
+  Task:
+    type: object
+    properties:
+      DebuggerDisplayMethodDescription:
+        type: "string"
+      Options:
+        $ref: "#/definitions/TaskCreationOptions"
+      IsWaitNotificationEnabledOrNotRanToCompletion:
+        type:" boolean"
+      ShouldNotifyDebuggerOfWaitCompletion:
+        type:" boolean"
+      IsWaitNotificationEnabled:
+        type:" boolean"
+      Id:
+        type: "number"
+        format: int32
+      CurrentId:
+        type: "number"
+        format: decimal(9,2)
+      InternalCurrent:
+        $ref: "#/definitions/Task"
+      CurrentStackGuard:
+        $ref: "#/definitions/StackGuard"
+      Exception:
+        $ref: "#/definitions/AggregateException"
+      Status:
+        $ref: "#/definitions/TaskStatus"
+      IsCanceled:
+        type:" boolean"
+      IsCancellationRequested:
+        type:" boolean"
+      CancellationToken:
+        $ref: "#/definitions/CancellationToken"
+      IsCancellationAcknowledged:
+        type:" boolean"
+      IsCompleted:
+        type:" boolean"
+      IsRanToCompletion:
+        type:" boolean"
+      CreationOptions:
+        $ref: "#/definitions/TaskCreationOptions"
+      System.IAsyncResult.AsyncWaitHandle:
+        $ref: "#/definitions/WaitHandle"
+      AsyncState:
+        $ref: "#/definitions/Object"
+      System.IAsyncResult.CompletedSynchronously:
+        type:" boolean"
+      ExecutingTaskScheduler:
+        $ref: "#/definitions/TaskScheduler"
+      Factory:
+        $ref: "#/definitions/TaskFactory"
+      CompletedTask:
+        $ref: "#/definitions/Task"
+      CompletedEvent:
+        $ref: "#/definitions/ManualResetEventSlim"
+      IsSelfReplicatingRoot:
+        type:" boolean"
+      IsChildReplica:
+        type:" boolean"
+      ActiveChildCount:
+        type: "number"
+        format: int32
+      ExceptionRecorded:
+        type:" boolean"
+      IsFaulted:
+        type:" boolean"
+      CapturedContext:
+        $ref: "#/definitions/ExecutionContext"
+      IsExceptionObservedByParent:
+        type:" boolean"
+      IsDelegateInvoked:
+        type:" boolean"
+      SavedStateForNextReplica:
+        $ref: "#/definitions/Object"
+      SavedStateFromPreviousReplica:
+        $ref: "#/definitions/Object"
+      HandedOverChildReplica:
+        $ref: "#/definitions/Task"
+  TaskFactory`1:
+    type: object
+    properties:
+      DefaultScheduler:
+        $ref: "#/definitions/TaskScheduler"
+      CancellationToken:
+        $ref: "#/definitions/CancellationToken"
+      Scheduler:
+        $ref: "#/definitions/TaskScheduler"
+      CreationOptions:
+        $ref: "#/definitions/TaskCreationOptions"
+      ContinuationOptions:
+        $ref: "#/definitions/TaskContinuationOptions"
+  TaskFactory`1:
+    type: object
+    properties:
+      DefaultScheduler:
+        $ref: "#/definitions/TaskScheduler"
+      CancellationToken:
+        $ref: "#/definitions/CancellationToken"
+      Scheduler:
+        $ref: "#/definitions/TaskScheduler"
+      CreationOptions:
+        $ref: "#/definitions/TaskCreationOptions"
+      ContinuationOptions:
+        $ref: "#/definitions/TaskContinuationOptions"
+  TaskFactory`1:
+    type: object
+    properties:
+      DefaultScheduler:
+        $ref: "#/definitions/TaskScheduler"
+      CancellationToken:
+        $ref: "#/definitions/CancellationToken"
+      Scheduler:
+        $ref: "#/definitions/TaskScheduler"
+      CreationOptions:
+        $ref: "#/definitions/TaskCreationOptions"
+      ContinuationOptions:
+        $ref: "#/definitions/TaskContinuationOptions"
+  TaskFactory`1:
+    type: object
+    properties:
+      DefaultScheduler:
+        $ref: "#/definitions/TaskScheduler"
+      CancellationToken:
+        $ref: "#/definitions/CancellationToken"
+      Scheduler:
+        $ref: "#/definitions/TaskScheduler"
+      CreationOptions:
+        $ref: "#/definitions/TaskCreationOptions"
+      ContinuationOptions:
+        $ref: "#/definitions/TaskContinuationOptions"

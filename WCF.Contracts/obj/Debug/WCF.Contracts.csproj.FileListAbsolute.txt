@@ -1,0 +1,7 @@
+C:\Users\User\documents\visual studio 2012\Projects\WcfServiceTest\WCF.Contracts\bin\Debug\WCF.Contracts.dll
+C:\Users\User\documents\visual studio 2012\Projects\WcfServiceTest\WCF.Contracts\bin\Debug\WCF.Contracts.pdb
+C:\Users\User\documents\visual studio 2012\Projects\WcfServiceTest\WCF.Contracts\bin\Debug\DevTrends.WCFDataAnnotations.dll
+C:\Users\User\documents\visual studio 2012\Projects\WcfServiceTest\WCF.Contracts\bin\Debug\DevTrends.WCFDataAnnotations.pdb
+C:\Users\User\documents\visual studio 2012\Projects\WcfServiceTest\WCF.Contracts\obj\Debug\WCF.Contracts.dll
+C:\Users\User\documents\visual studio 2012\Projects\WcfServiceTest\WCF.Contracts\obj\Debug\WCF.Contracts.pdb
+C:\Users\User\Documents\Visual Studio 2012\Projects\WcfServiceTest\WCF.Contracts\obj\Debug\WCF.Contracts.csprojResolveAssemblyReference.cache

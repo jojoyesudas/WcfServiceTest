@@ -1,0 +1,9 @@
+C:\Users\User\documents\visual studio 2012\Projects\WcfServiceTest\WcfServiceTest\bin\WcfServiceTest.dll
+C:\Users\User\documents\visual studio 2012\Projects\WcfServiceTest\WcfServiceTest\bin\WcfServiceTest.pdb
+C:\Users\User\documents\visual studio 2012\Projects\WcfServiceTest\WcfServiceTest\obj\Debug\WcfServiceTest.dll
+C:\Users\User\documents\visual studio 2012\Projects\WcfServiceTest\WcfServiceTest\obj\Debug\WcfServiceTest.pdb
+C:\Users\User\documents\visual studio 2012\Projects\WcfServiceTest\WcfServiceTest\bin\DevTrends.WCFDataAnnotations.dll
+C:\Users\User\documents\visual studio 2012\Projects\WcfServiceTest\WcfServiceTest\bin\DevTrends.WCFDataAnnotations.pdb
+C:\Users\User\documents\visual studio 2012\Projects\WcfServiceTest\WcfServiceTest\bin\Unity.Abstractions.dll
+C:\Users\User\documents\visual studio 2012\Projects\WcfServiceTest\WcfServiceTest\bin\Unity.Container.dll
+C:\Users\User\documents\visual studio 2012\Projects\WcfServiceTest\WcfServiceTest\bin\Unity.Wcf.dll

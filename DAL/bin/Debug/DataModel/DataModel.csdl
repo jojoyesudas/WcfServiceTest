@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmployeeDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Entities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Addresses" EntityType="EmployeeDBModel.Address" />
+    <EntitySet Name="Employees" EntityType="EmployeeDBModel.Employee" />
+    <AssociationSet Name="FK_Address_ToEmployee" Association="EmployeeDBModel.FK_Address_ToEmployee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Address" EntitySet="Addresses" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeId" Type="Int32" Nullable="false" />
+    <Property Name="Line1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Line2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="POBox" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Country" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="16" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Employee" Relationship="EmployeeDBModel.FK_Address_ToEmployee" FromRole="Address" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="FName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Gender" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="Addresses" Relationship="EmployeeDBModel.FK_Address_ToEmployee" FromRole="Employee" ToRole="Address" />
+  </EntityType>
+  <Association Name="FK_Address_ToEmployee">
+    <End Role="Employee" Type="EmployeeDBModel.Employee" Multiplicity="1" />
+    <End Role="Address" Type="EmployeeDBModel.Address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Address">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
